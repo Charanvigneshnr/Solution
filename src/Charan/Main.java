@@ -8,5 +8,6 @@ public class Main
         String s = sc.nextLine();
         int StrLen=s.length();
         X.LetterX(s, StrLen);
+        L.LetterL(s, StrLen);
     }
 }
