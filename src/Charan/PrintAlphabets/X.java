@@ -2,6 +2,7 @@ package Charan.PrintAlphabets;
 
 public class X {
     static void LetterX(String s, int len) {
+        System.out.println("\nPrinting " + s + " in the pattern X\n");
         for (int i = 0; i < len; i++)
         {
             for (int j = 0; j < len; j++)
@@ -17,5 +18,6 @@ public class X {
             }
             System.out.println();
         }
+        System.out.println("\nPattern X Printed");
     }
 }

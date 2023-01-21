@@ -9,5 +9,6 @@ public class Main
         int StrLen=s.length();
         X.LetterX(s, StrLen);
         L.LetterL(s, StrLen);
+        C.LetterC(s, StrLen);
     }
 }
