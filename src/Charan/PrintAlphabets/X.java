@@ -1,4 +1,4 @@
-package Charan;
+package Charan.PrintAlphabets;
 
 public class X {
     static void LetterX(String s, int len) {

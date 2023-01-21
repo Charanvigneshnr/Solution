@@ -1,4 +1,4 @@
-package Charan;
+package Charan.PrintAlphabets;
 import java.util.Scanner;
 public class Main
 {
