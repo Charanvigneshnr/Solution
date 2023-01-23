@@ -7,8 +7,30 @@ public class Main
         System.out.print("Enter a string of odd length: ");
         String s = sc.nextLine();
         int StrLen=s.length();
-        X.LetterX(s, StrLen);
-        L.LetterL(s, StrLen);
-        C.LetterC(s, StrLen);
+        System.out.print("Enter the alphabet to print: ");
+        char Alphabet=sc.next().charAt(0);
+        switch (Alphabet)
+        {
+            case 'X':
+            {
+                X.LetterX(s, StrLen);
+                break;
+            }
+            case 'C':
+            {
+                C.LetterC(s, StrLen);
+                break;
+            }
+            case 'L':
+            {
+                L.LetterL(s, StrLen);
+                break;
+            }
+            case 'O':
+            {
+                O.LetterO(s, StrLen);
+                break;
+            }
+        }
     }
 }
