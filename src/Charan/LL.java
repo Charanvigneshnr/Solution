@@ -100,6 +100,21 @@ public class LL {
         }
         return node;
     }
+    public void find(int target)
+    {
+        Node temp = head;
+        int pos = 1;
+        while (temp!=null)
+        {
+            if (temp.data==target)
+            {
+                System.out.println(pos);
+                break;
+            }
+            temp=temp.next;
+            pos++;
+        }
+    }
     public void delete(int index){
         if (index==0)
         {
