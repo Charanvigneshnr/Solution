@@ -15,9 +15,10 @@ public class GroupAnagrams
                     if ((!checkAnagram(strs[i], strs[j]))&&j==len-1)
                     {
                         innerList.add(strs[i]);
+                        outerList.add(innerList);
                         break;
                     }
-                    else
+                    else if (checkAnagram(strs[i], strs[j]))
                     {
                         innerList.add(strs[j]);
                     }
