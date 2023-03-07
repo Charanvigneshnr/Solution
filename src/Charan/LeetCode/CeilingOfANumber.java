@@ -2,7 +2,7 @@ package Charan.LeetCode;
 
 public class CeilingOfANumber
 {
-    static int CeilingOfANumber(int[] arr, int key, int low, int high)
+    public static int CeilingOfANumber(int[] arr, int key, int low, int high)
     {
         int mid = low + (high-low) / 2;
         while (low <= high)
