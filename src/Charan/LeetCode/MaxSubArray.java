@@ -2,30 +2,17 @@ package Charan.LeetCode;
 
 import java.util.ArrayList;
 import java.util.List;
-//Time Limit Exceeded
+
 public class MaxSubArray
 {
     public int MaxSubArray(int[] nums) {
-        int max = Integer.MIN_VALUE;
-        int len = nums.length;
-        int i,j,k;
-        int temp=0;
-        List<Integer> inner = new ArrayList<Integer>();
-        for (i=0;i<len;i++)
-        {
-            for (j=i;j<len;j++)
+        int sum = -999999;
+        int max = -999999;
+        int i = 0;
+        for (i=0;i<nums.length;i++)
             {
-                for (k=i; k<=j; k++)
-                {
-                    inner.add(nums[k]);
-                    temp+=nums[k];
-                }
-                if (temp>max)
-                {
-                    max=temp;
-                }
-                temp=0;
-            }
+            sum = Math.max(nums[i],nums[i]+sum);
+            max = Math.max(max,sum);
         }
         return max;
     }
