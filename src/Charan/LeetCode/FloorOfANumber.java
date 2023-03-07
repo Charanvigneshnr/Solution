@@ -1,8 +1,8 @@
 package Charan.LeetCode;
 
-public class CeilingOfANumber
+public class FloorOfANumber
 {
-    static int CeilingOfANumber(int[] arr, int key, int low, int high)
+    static int FloorOfANumber(int[] arr, int key, int low, int high)
     {
         int mid = low + (high-low) / 2;
         while (low <= high)
@@ -15,6 +15,6 @@ public class CeilingOfANumber
                 low = mid + 1;
             mid = low + (high-low) / 2;
         }
-        return low;
+        return high;
     }
 }
