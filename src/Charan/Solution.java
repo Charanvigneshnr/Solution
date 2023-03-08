@@ -1,7 +1,7 @@
 package Charan;
 import Charan.LeetCode.*;
-
-import static java.lang.Math.max;
+import java.util.*;
+import java.lang.*;
 
 public class Solution
 {
