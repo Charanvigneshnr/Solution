@@ -1,12 +1,10 @@
 package Charan;
-import Charan.LeetCode.*;
 
-import static java.lang.Math.max;
+import Charan.LeetCode.CountPrimes;
 
-public class Solution
-{
-    public static void main(String[] args)
-    {
-
+public class Solution {
+    public static void main(String[] args) {
+        CountPrimes cp = new CountPrimes();
+        System.out.println(cp.CountPrimes(10));
     }
 }

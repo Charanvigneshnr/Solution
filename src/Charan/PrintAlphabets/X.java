@@ -3,16 +3,11 @@ package Charan.PrintAlphabets;
 public class X {
     static void LetterX(String s, int len) {
         System.out.println("\nPrinting " + s + " in the pattern X\n");
-        for (int i = 0; i < len; i++)
-        {
-            for (int j = 0; j < len; j++)
-            {
-                if ((i==j)||(i+j==len-1))
-                {
+        for (int i = 0; i < len; i++) {
+            for (int j = 0; j < len; j++) {
+                if ((i == j) || (i + j == len - 1)) {
                     System.out.print(s.charAt(i));
-                }
-                else
-                {
+                } else {
                     System.out.print(" ");
                 }
             }

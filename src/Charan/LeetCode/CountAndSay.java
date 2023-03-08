@@ -1,28 +1,21 @@
 package Charan.LeetCode;
 
-public class CountAndSay
-{
-    public String count(String n)
-    {
-        if (n=="1")
-        {
+public class CountAndSay {
+    public String count(String n) {
+        if (n == "1") {
             return "1";
         }
-        if (n=="2")
-        {
+        if (n == "2") {
             return "11";
-        }
-        else
-        {
+        } else {
             String s = n;
             int cnt = 1;
             char ch = s.charAt(0);
             StringBuilder curr = new StringBuilder();
-            for(int i=1;i<s.length();i++){
-                if(s.charAt(i)==ch){
+            for (int i = 1; i < s.length(); i++) {
+                if (s.charAt(i) == ch) {
                     cnt++;
-                }
-                else{
+                } else {
                     curr.append(cnt);
                     curr.append(ch);
                     ch = s.charAt(i);
@@ -34,10 +27,12 @@ public class CountAndSay
             return curr.toString();
         }
     }
+
     public String CountAndSay(int n) {
         String s = "1";
-        for(int i=1;i<n;i++){
+        for (int i = 1; i < n; i++) {
             s = count(s);
         }
         return s;
-}}
+    }
+}
