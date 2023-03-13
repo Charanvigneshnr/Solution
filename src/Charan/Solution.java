@@ -4,7 +4,8 @@ import Charan.LeetCode.CountPrimes;
 
 public class Solution {
     public static void main(String[] args) {
-        CountPrimes cp = new CountPrimes();
-        System.out.println(cp.CountPrimes(10));
+        Primes p = new Primes();
+        System.out.println(p.CheckPrime(16));
+
     }
 }
