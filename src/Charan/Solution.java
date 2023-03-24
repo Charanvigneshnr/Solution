@@ -1,11 +1,12 @@
 package Charan;
 
+import Charan.LeetCode.Compress;
 import Charan.LeetCode.CountPrimes;
 
 public class Solution {
     public static void main(String[] args) {
-        Primes p = new Primes();
-        System.out.println(p.CheckPrime(16));
-
+        Compress c = new Compress();
+        char[] input = new char[]{'a', 'a', 'b', 'b', 'c', 'c', 'c'};
+        System.out.println(c.Compress(input));
     }
 }
