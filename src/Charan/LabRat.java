@@ -1,19 +1,26 @@
 package Charan;
 
 public class LabRat {
-    public int BinarySearch(int[] arr, int target) {
-        int low = arr[0];
-        int high = arr[arr.length - 1];
-        int mid = low + (high - low) / 2;
-        while (low <= high) {
-            if (arr[mid] == target)
-                return mid;
-            else if (arr[mid] > target)
-                high = mid - 1;
-            else
-                low = mid + 1;
-            mid = low + (high - low) / 2;
+    public int LCS(String s1, String s2)
+    {
+        int len1 = s1.length();
+        int len2 = s2.length();
+        int[][] dp = new int[len1+1][len2+1];
+        int i, j;
+        for (i=1;i<=len1;i++)
+        {
+            for (j=1;j<=len2;j++)
+            {
+                if (s1.charAt(i-1) == s2.charAt(j-1))
+                {
+                    dp[i][j] = dp[i-1][j-1] + 1;
+                }
+                else
+                {
+                    dp[i][j] = Math.max(dp[i-1][j], dp[i][j-1]);
+                }
+            }
         }
-        return high;
+        return dp[len1][len2];
     }
 }
