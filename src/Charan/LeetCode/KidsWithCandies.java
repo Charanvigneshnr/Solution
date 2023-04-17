@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class GreatestNumberOfCandies {
+public class KidsWithCandies {
     public List<Boolean> KidsWithCandies(int[] candies, int extraCandies) {
         int len = candies.length;
         ArrayList<Boolean> list = new ArrayList<>();
