@@ -21,6 +21,7 @@ class Solution {
         }
         ListNode result = null; // initialize to null to remove the extra node
         int sum = n1+n2;
+        sum = sum*10+1;
         sum = reverseNumber(sum);
         if (sum == 0) {
             return new ListNode(0);
