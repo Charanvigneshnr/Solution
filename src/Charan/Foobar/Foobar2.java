@@ -33,17 +33,18 @@ import java.util.Comparator;
 public class Foobar2 {
     public static String[] solution(String[] l) {
         Arrays.sort(l, new Comparator<String>() {
-            public int compare(String v1, String v2) {
-                String[] components1 = v1.split("\\.");
-                String[] components2 = v2.split("\\.");
-                for (int i = 0; i < Math.max(components1.length, components2.length); i++) {
-                    int component1 = i < components1.length ? Integer.parseInt(components1[i]) : 0;
-                    int component2 = i < components2.length ? Integer.parseInt(components2[i]) : 0;
-                    if (component1 != component2) {
-                        return Integer.compare(component1, component2);
+            public int compare(String s1, String s2) {
+                String[] c1 = s1.split("\\.");
+                String[] c2 = s2.split("\\.");
+                int i, x, y;
+                for (i = 0; i < Math.max(c1.length, c2.length); i++) {
+                    x = i < c1.length ? Integer.parseInt(c1[i]) : 0;
+                    y = i < c2.length ? Integer.parseInt(c2[i]) : 0;
+                    if (x != y) {
+                        return Integer.compare(x, y);
                     }
                 }
-                return 0;
+                return Integer.compare(c1.length, c2.length);
             }
         });
         return l;
