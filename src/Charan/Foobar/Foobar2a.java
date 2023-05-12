@@ -30,7 +30,7 @@ package Charan.Foobar;
 import java.util.Arrays;
 import java.util.Comparator;
 
-public class Foobar2 {
+public class Foobar2a {
     public static String[] solution(String[] l) {
         Arrays.sort(l, new Comparator<String>() {
             public int compare(String s1, String s2) {

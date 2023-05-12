@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Recursion {
     public static void main(String[] args) {
-        System.out.print("Enter the kth number to find the kth fibonacci number: ");
+        System.out.print("Enter the k number to find the kth fibonacci number: ");
         Scanner sc = new Scanner(System.in);
         int k = sc.nextInt();
         System.out.println(recFunc(k));
