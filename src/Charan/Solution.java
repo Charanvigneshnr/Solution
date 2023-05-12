@@ -4,8 +4,8 @@ import Charan.Foobar.*;
 
 public class Solution {
     public static void main(String[] args) {
-        Foobar2b f = new Foobar2b();
-        System.out.println(f.solution("<<>><"));
+        LabRat lr = new LabRat();
+        System.out.println(lr.noOfFactors(1024));
     }
 }
 

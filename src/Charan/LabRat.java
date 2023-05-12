@@ -1,26 +1,22 @@
 package Charan;
 
 public class LabRat {
-    public int LCS(String s1, String s2)
+    public int[][] noOfFactors(int x)
     {
-        int len1 = s1.length();
-        int len2 = s2.length();
-        int[][] dp = new int[len1+1][len2+1];
-        int i, j;
-        for (i=1;i<=len1;i++)
+        int len = (int) Math.sqrt(x);
+        int[][] result = new int[len*2][len*2];
+        int i;
+        for (i = 1; i <= len*2; i++)
         {
-            for (j=1;j<=len2;j++)
+            if (x % i == 0 && i<=len)
             {
-                if (s1.charAt(i-1) == s2.charAt(j-1))
-                {
-                    dp[i][j] = dp[i-1][j-1] + 1;
-                }
-                else
-                {
-                    dp[i][j] = Math.max(dp[i-1][j], dp[i][j-1]);
-                }
+                result[i][i]=result[i][x/i];
+            }
+            if (x % i == 0 && i>=len)
+            {
+                result[i][i]=result[x/i][i];
             }
         }
-        return dp[len1][len2];
+        return result;
     }
 }
