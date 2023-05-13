@@ -1,22 +1,34 @@
 package Charan;
 
+import java.util.Arrays;
+
 public class LabRat {
-    public int[][] noOfFactors(int x)
-    {
-        int len = (int) Math.sqrt(x);
-        int[][] result = new int[len*2][len*2];
-        int i;
-        for (i = 1; i <= len*2; i++)
-        {
-            if (x % i == 0 && i<=len)
-            {
-                result[i][i]=result[i][x/i];
-            }
-            if (x % i == 0 && i>=len)
-            {
-                result[i][i]=result[x/i][i];
-            }
+    public int[][] generateMatrix(int n) {
+        int[][] matrix = new int[n][n];
+
+        for (int[] row : matrix) {
+            Arrays.fill(row, 0);
         }
-        return result;
+
+        matrix[0][n / 2] = 1;
+        int i = 0;
+        int j = n / 2;
+        int count = 2;
+
+        for (int num = 2; num <= n * n; num++) {
+            int newI = (i - 1 + n) % n;
+            int newJ = (j + 1) % n;
+
+            if (matrix[newI][newJ] == 0) {
+                i = newI;
+                j = newJ;
+            } else {
+                i = (i + 1) % n;
+            }
+
+            matrix[i][j] = num;
+        }
+
+        return matrix;
     }
 }
