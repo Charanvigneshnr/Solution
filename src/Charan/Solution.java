@@ -1,32 +1,15 @@
 package Charan;
 
-import Charan.Foobar.*;
+import Charan.*;
+import Charan.Recursion.Recursion;
 
 import java.util.Scanner;
 
 public class Solution {
     public static void main(String[] args) {
-//        Scanner sc = new Scanner(System.in);
-//        System.out.print("Enter the first number:");
-//        int a = sc.nextInt();
-////        System.out.print("Enter the second number:");
-////        int b = sc.nextInt();
-////        if ((a^b)==0)
-////        {
-////            System.out.println("Equal");
-////        }
-////        else
-////        {
-////            System.out.println("Nah!");
-////        }
-//        if ((a & 1)==1)
-//            System.out.println("Odd");
-//        else
-//            System.out.println("Even");
-        int a = 5;
-        int b = a++ + ++a + a++ + ++a;
-        System.out.println(b);
+        Recursion r = new Recursion();
+        int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12};
+        int res= r.result(arr, 4);
+        System.out.println(res);
     }
 }
-
-//Program to find whether the given numbers are equal or nah, without using comparison operators and arithmetic operators.

@@ -3,22 +3,29 @@ package Charan.Recursion;
 import java.util.Scanner;
 
 public class Recursion {
-    public static void main(String[] args) {
-        System.out.print("Enter the k number to find the kth fibonacci number: ");
-        Scanner sc = new Scanner(System.in);
-        int k = sc.nextInt();
-        System.out.format("Fibonacci number: %d\n",recFunc(k));
-        System.out.println("Using constant time method: "+fibonacci(k));
-    }
-
-    private static int recFunc(int i) {
-        if(i<2) return i;
-        return recFunc(i-1)+recFunc(i-2);
-    }
-
-        public static long fibonacci(int n) {
-            double a = (1 + Math.sqrt(5)) / 2;
-            double b = (1 - Math.sqrt(5)) / 2;
-            return (long) ((Math.pow(a, n) - Math.pow(b, n)) / Math.sqrt(5));
+    public static int result(int[] arr, int target) {
+        int start = 0;
+        int end = 1;
+        int result = 0;
+        while(target>arr[end])
+        {
+            int nStart = end + 1;
+            end = end * (start + (end-start + 1)) * 2;
+            start = nStart;
         }
+        return infiniteBinarySearch(arr, target, start, end);
+    }
+    public static int infiniteBinarySearch(int[] arr, int target, int start, int end) {
+        while (start <= end) {
+            int mid = start + (end - start) / 2;
+            if (target < arr[mid]) {
+                end = mid - 1;
+            } else if (target > arr[mid] ) {
+                start = mid + 1;
+            } else {
+                return mid;
+            }
+        }
+        return -1;
+    }
 }
