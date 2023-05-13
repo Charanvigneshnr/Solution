@@ -7,7 +7,7 @@ public class Recursion {
         System.out.print("Enter the k number to find the kth fibonacci number: ");
         Scanner sc = new Scanner(System.in);
         int k = sc.nextInt();
-//        System.out.format("Fibonacci number: %d\n",recFunc(k));
+        System.out.format("Fibonacci number: %d\n",recFunc(k));
         System.out.println("Using constant time method: "+fibonacci(k));
     }
 
@@ -22,6 +22,3 @@ public class Recursion {
             return (long) ((Math.pow(a, n) - Math.pow(b, n)) / Math.sqrt(5));
         }
 }
-
-//ip: 1 2 3 4 5
-//op: 0 1 1 2 3
