@@ -1,4 +1,5 @@
 package Charan.Foobar;
+
 /*
 En Route Salute===============
 
@@ -13,7 +14,7 @@ Input:Solution.solution(">----<")Output:    2
 Input:Solution.solution("<<>><")Output:    4
  */
 public class Foobar2b {
-    public static int solution(String s){
+    public static int solution(String s) {
         int result = 0;
         int curr = 0;
         int len = s.length();

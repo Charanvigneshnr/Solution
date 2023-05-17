@@ -9,14 +9,11 @@ public class KidsWithCandies {
         int len = candies.length;
         ArrayList<Boolean> list = new ArrayList<>();
         int i;
-        int target = Arrays.stream(candies).max().getAsInt();;
+        int target = Arrays.stream(candies).max().getAsInt();
         for (i = 0; i < len; i++) {
-            if (candies[i] + extraCandies>=target)
-            {
+            if (candies[i] + extraCandies >= target) {
                 list.add(true);
-            }
-            else
-            {
+            } else {
                 list.add(false);
             }
         }

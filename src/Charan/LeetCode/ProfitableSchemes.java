@@ -1,14 +1,13 @@
 package Charan.LeetCode;
 
-public class ProfitableSchemes
-{
+public class ProfitableSchemes {
     public int ProfitableSchemes(int n, int minProfit, int[] group, int[] profit) {
         // Define the method signature and input parameters
 
         int mod = (int) 1e9 + 7;
         // Define a variable to store the modulo value
 
-        var memo = new int[n+1][minProfit+1];
+        var memo = new int[n + 1][minProfit + 1];
         // Define a 2D array to store the memoized values
 
         memo[0][0] = 1;
@@ -17,7 +16,7 @@ public class ProfitableSchemes
         for (int k = 1; k <= group.length; k++) {
             // Loop through each crime k
 
-            int g = group[k-1], p = profit[k-1];
+            int g = group[k - 1], p = profit[k - 1];
             // Get the number of members required for the current crime g and the profit for the current crime p
 
             for (int i = n; g <= i; i--) { // i: n -> g

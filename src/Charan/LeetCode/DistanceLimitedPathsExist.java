@@ -3,8 +3,9 @@ package Charan.LeetCode;
 import java.util.Arrays;
 
 class DSU {
-    private int[] parent;
-    private int[] rank;
+    private final int[] parent;
+    private final int[] rank;
+
     public DSU(int n) {
 
         parent = new int[n];
@@ -13,12 +14,14 @@ class DSU {
             parent[i] = i;
         }
     }
+
     public int find(int x) {
         if (parent[x] == x) {
             return x;
         }
         return parent[x] = find(parent[x]);
     }
+
     public boolean union(int x, int y) {
         int xset = find(x), yset = find(y);
         if (xset != yset) {
@@ -35,14 +38,15 @@ class DSU {
         return false;
     }
 }
+
 class DistanceLimitedPathsExist {
     public boolean[] DistanceLimitedPathsExist(int n, int[][] edgeList, int[][]
             queries) {
         DSU dsu = new DSU(n);
         for (int i = 0; i < queries.length; i++) {
-            queries[i] = new int[] { queries[i][0], queries[i][1], queries[i]
+            queries[i] = new int[]{queries[i][0], queries[i][1], queries[i]
 
-                    [2], i };
+                    [2], i};
         }
         Arrays.sort(queries, (a, b) -> Integer.compare(a[2], b[2]));
         Arrays.sort(edgeList, (a, b) -> Integer.compare(a[2], b[2]));

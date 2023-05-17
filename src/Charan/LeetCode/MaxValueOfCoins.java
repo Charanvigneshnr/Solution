@@ -2,8 +2,7 @@ package Charan.LeetCode;
 
 import java.util.List;
 
-public class MaxValueOfCoins
-{
+public class MaxValueOfCoins {
     public static int MaxValueOfCoins(List<List<Integer>> piles, int k) {
         int[] mv = new int[k + 1];
         int[] pileSum = new int[k + 1];

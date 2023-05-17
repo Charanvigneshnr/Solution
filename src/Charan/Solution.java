@@ -3,7 +3,7 @@ package Charan;
 import java.util.Scanner;
 
 public class Solution {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter number of nodes: ");
         int n = sc.nextInt();
@@ -13,18 +13,17 @@ public class Solution {
         int[][] ip = new int[n][m];
         for (i = 0; i < m; i++) {
             System.out.print("Node A: ");
-          ip[i][0]=sc.nextInt();
+            ip[i][0] = sc.nextInt();
             System.out.print("Node B: ");
-          ip[i][1]=sc.nextInt();
+            ip[i][1] = sc.nextInt();
         }
         for (i = 0; i < n; i++) {
-            System.out.print(i+"->");
+            System.out.print(i + "->");
             for (j = 0; j < m; j++) {
                 if (ip[j][0] == i) {
-                    System.out.print(ip[j][1]+", ");
-                }
-                else if (ip[j][1] == i) {
-                    System.out.print(ip[j][0]+", ");
+                    System.out.print(ip[j][1] + ", ");
+                } else if (ip[j][1] == i) {
+                    System.out.print(ip[j][0] + ", ");
                 }
             }
             System.out.println();

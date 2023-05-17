@@ -10,11 +10,11 @@ public class SuccessfulPairs {
 
         Arrays.sort(potions);
 
-        for (int i=0; i<len1; i++) {
-            int low = 0, high = len2-1, mid;
-            while(low <= high) {
+        for (int i = 0; i < len1; i++) {
+            int low = 0, high = len2 - 1, mid;
+            while (low <= high) {
                 mid = low + (high - low) / 2;
-                if((long)spells[i] * potions[mid] >= success) {
+                if ((long) spells[i] * potions[mid] >= success) {
                     high = mid - 1;
                 } else {
                     low = mid + 1;

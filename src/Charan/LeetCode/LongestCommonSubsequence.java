@@ -1,7 +1,6 @@
 package Charan.LeetCode;
 
-public class LongestCommonSubsequence
-{
+public class LongestCommonSubsequence {
     public int LongestCommonSubsequence(String text1, String text2) {
         int len1 = text1.length();
         int len2 = text2.length();

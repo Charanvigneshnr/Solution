@@ -1,7 +1,6 @@
 package Charan.LeetCode;
 
-public class NextGreatestLetter
-{
+public class NextGreatestLetter {
     public char nextGreatestLetter(char[] arr, char target) {
         int start = 0;
         int end = arr.length - 1;
@@ -13,6 +12,6 @@ public class NextGreatestLetter
                 start = mid + 1;
             }
         }
-        return arr[start%arr.length];
+        return arr[start % arr.length];
     }
 }

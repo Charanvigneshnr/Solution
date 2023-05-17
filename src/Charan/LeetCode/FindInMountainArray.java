@@ -1,8 +1,9 @@
 package Charan.LeetCode;
 
 interface MountainArray {
-    public int get(int index);
-    public int length();
+    int get(int index);
+
+    int length();
 }
 
 public class FindInMountainArray {

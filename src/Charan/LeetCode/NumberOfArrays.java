@@ -1,5 +1,7 @@
 package Charan.LeetCode;
-import java.util.*;
+
+import java.util.Arrays;
+
 public class NumberOfArrays {
     public int dfs(String s, long k, int i, int[] dp) {
         if (i == s.length()) return 1;
