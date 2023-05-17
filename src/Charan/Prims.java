@@ -16,7 +16,7 @@ public class Prims {
         boolean[] selected = new boolean[V];
         Arrays.fill(selected, false);
         selected[0] = true;
-        System.out.println("Edge  : Weight");
+        System.out.println("Edge  " + ": Weight");
         while (no_edge < V - 1) {
             int min = INF;
             int x = 0;
