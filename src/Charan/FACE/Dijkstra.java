@@ -1,6 +1,7 @@
-package Charan;
+package Charan.FACE;
 
 //To find min path between source and destination
+//Initially we set all nodes as unvisited and distance to infinity
 public class Dijkstra {
     public static void dijkstra(int[][] graph, int source) {
         int count = graph.length;
@@ -10,13 +11,10 @@ public class Dijkstra {
             visitedVertex[i] = false;
             distance[i] = Integer.MAX_VALUE;
         }
-
         distance[source] = 0;
         for (int i = 0; i < count; i++) {
-
             int u = findMinDistance(distance, visitedVertex);
             visitedVertex[u] = true;
-
             for (int v = 0; v < count; v++) {
                 if (!visitedVertex[v] && graph[u][v] != 0 && (distance[u] + graph[u][v] < distance[v])) {
                     distance[v] = distance[u] + graph[u][v];
@@ -26,7 +24,6 @@ public class Dijkstra {
         for (int i = 0; i < distance.length; i++) {
             System.out.printf("Distance from %s to %s is %s%n", source, i, distance[i]);
         }
-
     }
 
     private static int findMinDistance(int[] distance, boolean[] visitedVertex) {
@@ -45,6 +42,6 @@ public class Dijkstra {
         int[][] graph = new int[][]{{0, 0, 1, 2, 0, 0, 0}, {0, 0, 2, 0, 0, 3, 0}, {1, 2, 0, 1, 3, 0, 0},
                 {2, 0, 1, 0, 0, 0, 1}, {0, 0, 3, 0, 0, 2, 0}, {0, 3, 0, 0, 2, 0, 1}, {0, 0, 0, 1, 0, 1, 0}};
         Dijkstra T = new Dijkstra();
-        T.dijkstra(graph, 0);
+        T.dijkstra(graph, 3);
     }
 }

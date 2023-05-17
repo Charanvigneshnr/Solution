@@ -1,4 +1,4 @@
-package Charan;
+package Charan.FACE;
 
 public class MagicMatrix {
     public int[][] generateMatrix(int n) {

@@ -1,4 +1,4 @@
-package Charan;
+package Charan.Test;
 
 public class Palindrome {
     public boolean isPalindrome(String str) {
