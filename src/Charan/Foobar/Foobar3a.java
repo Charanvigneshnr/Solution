@@ -25,4 +25,18 @@ Your solution must be under 32000 characters in length including new lines and o
 package Charan.Foobar;
 
 public class Foobar3a {
+    public static int Foobar3a(int[] l) {
+        int count = 0;
+        int n = l.length;
+        int[] dp = new int[n];
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < i; j++) {
+                if (l[i] % l[j] == 0) {
+                    dp[i]++;
+                    count += dp[j];
+                }
+            }
+        }
+        return count;
+    }
 }

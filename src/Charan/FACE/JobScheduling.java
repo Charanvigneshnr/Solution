@@ -19,10 +19,10 @@ public class JobScheduling {
     public static void main(String[] args) {
         ArrayList<JobScheduling> arr = new ArrayList<>();
         arr.add(new JobScheduling('a', 2, 100));
-        arr.add(new JobScheduling('b', 1, 20));
-        arr.add(new JobScheduling('c', 2, 40));
-        arr.add(new JobScheduling('d', 1, 80));
-        arr.add(new JobScheduling('e', 3, 60));
+        arr.add(new JobScheduling('b', 2, 27));
+        arr.add(new JobScheduling('c', 1, 25));
+        arr.add(new JobScheduling('d', 1, 19));
+        arr.add(new JobScheduling('e', 3, 15));
 
         System.out.println("Following is maximum profit sequence of jobs");
         JobScheduling jobScheduling = new JobScheduling();
