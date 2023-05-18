@@ -1,7 +1,6 @@
 package Charan.FACE;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class JobScheduling {
 
@@ -18,7 +17,7 @@ public class JobScheduling {
     }
 
     public static void main(String[] args) {
-        ArrayList<JobScheduling> arr = new ArrayList<JobScheduling>();
+        ArrayList<JobScheduling> arr = new ArrayList<>();
         arr.add(new JobScheduling('a', 2, 100));
         arr.add(new JobScheduling('b', 1, 20));
         arr.add(new JobScheduling('c', 2, 40));
@@ -35,7 +34,7 @@ public class JobScheduling {
 
         int n = arr.size();
 
-        Collections.sort(arr, (a, b) -> b.profit - a.profit);
+        arr.sort((a, b) -> b.profit - a.profit);
 
         boolean[] result = new boolean[t];
 
