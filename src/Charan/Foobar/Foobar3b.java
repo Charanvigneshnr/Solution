@@ -20,5 +20,6 @@ Input:solution.solution('4', '7')Output:    4
 Input:solution.solution('2', '1')Output:    1
 */
 package Charan.Foobar;
+
 public class Foobar3b {
 }
