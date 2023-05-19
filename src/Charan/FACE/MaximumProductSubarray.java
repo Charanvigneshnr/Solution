@@ -1,11 +1,12 @@
 package Charan.FACE;
 
 import java.util.Scanner;
-
+//Maximum Product Subarray
 public class MaximumProductSubarray {
-    public static long MaximumProductSubarray(int[] arr, int n) {
-        long ans = Integer.MIN_VALUE;
-        long product = 1;
+    public static int MaximumProductSubarray(int[] arr) {
+        int n = arr.length;
+        int ans = Integer.MIN_VALUE;
+        int product = 1;
         for (int i = 0; i < n; i++) {
             product *= arr[i];
             ans = Math.max(ans, product);
@@ -33,6 +34,6 @@ public class MaximumProductSubarray {
             System.out.print("Enter element " + i + " : ");
             arr[i] = sc.nextInt();
         }
-        System.out.println("Maximum Subarray product is " + MaximumProductSubarray(arr, n));
+        System.out.println("Maximum Subarray product is " + MaximumProductSubarray(arr));
     }
 }
