@@ -13,77 +13,21 @@ Your solution must be under 32000 characters in length including new lines and o
 */
 import java.lang.Math;
 public class Foobar3c {
-//public class Solution {
+    public static int xor(int a, int b) {
+        if (a % 2 == 0) {
+            int[] xorRotation = {b, 1, b + 1, 0};
+            return xorRotation[(b - a) % 4];
+        } else {
+            int[] xorRotation = {a, a ^ b, a - 1, (a - 1) ^ b};
+            return xorRotation[(b - a) % 4];
+        }
+    }
 
     public static int solution(int start, int length) {
-        if (length == 1) return start;
-        return predictResult(start, length);
-    }
-
-    public static int predictResult(int start, int length) {
-        int result = 0;
-        for (int bit = 0; bit <= maxnob(start, length); bit++) {
-            result += Math.pow(2, bit) * predictobr(start, length, bit);
+        int res = 0;
+        for (int i = 0; i < length; i++) {
+            res ^= xor(start + (length * i), start + (length * i) + (length - i) - 1);
         }
-        return result;
-    }
-
-    public static int maxnob(int start, int length) {
-        int maxNum = start + length * length - 1;
-        return (int) (Math.ceil(Math.log(maxNum) / Math.log(2))) + 1;
-    }
-
-    public static int predictobr(int start, int length, int bitNum) {
-        int sumOfBits = 0;
-        for (int[] row : iterateRows(start, length)) {
-            sumOfBits += getsobrange(row[0], row[1], bitNum);
-        }
-        return sumOfBits % 2;
-    }
-
-    public static Iterable<int[]> iterateRows(int start, int length) {
-        return () -> new RowIterator(start, length);
-    }
-
-    public static int getsobrange(int start, int finish, int bitNumber) {
-        int before = predictsob(start - 1, bitNumber);
-        int bfinish = predictsob(finish, bitNumber);
-        return bfinish - before;
-    }
-
-    public static int predictsob(int num, int bitNumber) {
-        if (bitNumber == 0) return (num + 1) / 2;
-        int divisor = (int) Math.pow(2, bitNumber);
-        num -= divisor;
-        int quotient = (num / divisor) + 1;
-        int result = quotient * (divisor / 2);
-        if (quotient % 2 == 1) result += num % divisor - (int) Math.pow(2, bitNumber - 1) + 1;
-        return result;
-    }
-}
-
-class RowIterator implements java.util.Iterator<int[]> {
-    private int start;
-    private int length;
-    private int currentRow;
-
-    public RowIterator(int start, int length) {
-        this.start = start;
-        this.length = length;
-        this.currentRow = 0;
-    }
-
-    @Override
-    public boolean hasNext() {
-        return currentRow < length;
-    }
-
-    @Override
-    public int[] next() {
-        int firstNumber = start + currentRow * length;
-        int lastNeededNumber = firstNumber + length - currentRow;
-        int[] row = { firstNumber, lastNeededNumber - 1 };
-        currentRow++;
-        return row;
+        return res;
     }
 }
