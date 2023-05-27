@@ -1,21 +1,29 @@
 package Charan.Test;
 
-import java.util.Scanner;
-import java.util.Stack;
-
-
 public class LabRat {
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        Stack<Integer> stack = new Stack<>();
-        for (int i = 0; i < 10; i++) {
-            System.out.print("Enter a number: ");
-            stack.push(sc.nextInt());
+    public String findStringVowelFirstAndLast(int input1, String[] input2) {
+        String result = "";
+        int count = 0;
+
+        for (int i = 0; i < input1; i++) {
+            String s = input2[i].toLowerCase();
+            int len = s.length();
+
+            char firstChar = s.charAt(0);
+            char lastChar = s.charAt(len - 1);
+
+            if ((firstChar == 'a' || firstChar == 'e' || firstChar == 'i' || firstChar == 'o' || firstChar == 'u') &&
+                    (lastChar == 'a' || lastChar == 'e' || lastChar == 'i' || lastChar == 'o' || lastChar == 'u')) {
+                result += s;
+                count++;
+            }
         }
-        for (int i = 0; i < 10; i++) {
-            System.out.println(stack.pop());
+
+        if (count > 1) {
+            return result;
+        } else {
+            return "no matches found";
         }
     }
 }
-
