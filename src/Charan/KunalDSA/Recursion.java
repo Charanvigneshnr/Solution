@@ -1,4 +1,4 @@
-package Charan.Recursion;
+package Charan.KunalDSA;
 
 public class Recursion {
     public static int result(int[] arr, int target) {
