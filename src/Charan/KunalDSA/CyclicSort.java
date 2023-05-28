@@ -1,8 +1,6 @@
 package Charan.KunalDSA;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public class CyclicSort {
     public static void main(String[] args) {
@@ -11,13 +9,13 @@ public class CyclicSort {
         System.out.println(Arrays.toString(arr));
     }
 
-    public static List<Integer> CyclicSort(int[] arr) {
+    public static int CyclicSort(int[] arr) {
         int len = arr.length;
         int i = 0;
         int correct, temp;
         while (i < len) {
-            correct = arr[i] - 1;
-            if (arr[i] != arr[correct]) {
+            correct = arr[i];
+            if (arr[i] > 0 && arr[i] < len && arr[i] != arr[correct]) {
                 temp = arr[i];
                 arr[i] = arr[correct];
                 arr[correct] = temp;
@@ -25,12 +23,11 @@ public class CyclicSort {
                 i++;
             }
         }
-        ArrayList<Integer> res = new ArrayList<>();
-        for (i = 0; i < len; i++) {
-            if (arr[i] != i + 1) {
-                res.add(i);
+        for (int j = 0; j < len; j++) {
+            if (arr[j] != j) {
+                return j;
             }
         }
-        return res;
+        return -1;
     }
 }
