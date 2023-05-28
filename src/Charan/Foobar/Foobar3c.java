@@ -11,7 +11,7 @@ Wildcard imports and some specific classes are restricted (e.g. java.lang.ClassL
 Third-party libraries, input/output operations, spawning threads or processes and changes to the execution environment are not allowed.
 Your solution must be under 32000 characters in length including new lines and other non-printing characters.
 */
-import java.lang.Math;
+
 public class Foobar3c {
     public static int xor(int a, int b) {
         if (a % 2 == 0) {
