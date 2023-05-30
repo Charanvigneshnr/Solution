@@ -1,29 +1,18 @@
 package Charan.KunalDSA;
 
 public class Recursion {
-    public static int result(int[] arr, int target) {
-        int start = 0;
-        int end = 1;
-        int result = 0;
-        while (target > arr[end]) {
-            int nStart = end + 1;
-            end = end * (start + (end - start + 1)) * 2;
-            start = nStart;
-        }
-        return infiniteBinarySearch(arr, target, start, end);
+    static int number = 0;
+
+    public static void main(String[] args) {
+        recursion(12045);
+        System.out.println(number);
     }
 
-    public static int infiniteBinarySearch(int[] arr, int target, int start, int end) {
-        while (start <= end) {
-            int mid = start + (end - start) / 2;
-            if (target < arr[mid]) {
-                end = mid - 1;
-            } else if (target > arr[mid]) {
-                start = mid + 1;
-            } else {
-                return mid;
-            }
+    public static void recursion(int n) {
+        if (n == 0) {
+            return;
         }
-        return -1;
+        number = number * 10 + n % 10;
+        recursion(n / 10);
     }
 }
