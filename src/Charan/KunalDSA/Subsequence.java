@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Subsequence {
     public static void main(String[] args) {
-        int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        int[] arr = {1, 2, 3, 4};
         List<List<Integer>> list = subset(arr);
         for (List<Integer> l : list) {
             System.out.println(l);
