@@ -3,7 +3,7 @@ package Charan.Test;
 import org.jetbrains.annotations.Nullable;
 
 public class LL {
-    private Node head;
+    private @Nullable Node head;
     private Node tail;
     private int size;
 
@@ -86,7 +86,7 @@ public class LL {
         return val;
     }
 
-    public Node get(int index) {
+    public @Nullable Node get(int index) {
         Node node = head;
         for (int i = 0; i < index; i++) {
             node = node.next;

@@ -5,7 +5,7 @@ import org.jetbrains.annotations.NotNull;
 //To find min path between source and destination
 //Initially we set all nodes as unvisited and distance to infinity
 public class Dijkstra {
-    public static void dijkstra(int[] @NotNull [] graph, int source) {
+    public static void dijkstra(int[] @NotNull @NotNull [] graph, int source) {
         int count = graph.length;
         boolean[] visitedVertex = new boolean[count];
         int[] distance = new int[count];

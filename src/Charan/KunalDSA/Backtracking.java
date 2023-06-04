@@ -11,7 +11,7 @@ public class Backtracking {
         totalPath("", matrix, 0, 0, path, 1);
     }
 
-    public static void totalPath(String p, boolean[] @NotNull [] arr, int r, int c, int[][] path, int step) {
+    public static void totalPath(@NotNull String p, boolean[] @NotNull @NotNull [] arr, int r, int c, int[] @NotNull [] path, int step) {
         if (r == arr.length - 1 && c == arr[0].length - 1) {
             path[r][c] = step;
             for (int[] mat : path) {

@@ -42,7 +42,7 @@ class DSU {
 }
 
 class DistanceLimitedPathsExist {
-    public boolean[] DistanceLimitedPathsExist(int n, int[] @NotNull [] edgeList, int[] @NotNull []
+    public boolean[] DistanceLimitedPathsExist(int n, int[] @NotNull @NotNull [] edgeList, int[] @NotNull @NotNull []
             queries) {
         DSU dsu = new DSU(n);
         for (int i = 0; i < queries.length; i++) {

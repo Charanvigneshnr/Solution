@@ -1,5 +1,7 @@
 package Charan.KunalDSA;
 
+import org.jetbrains.annotations.NotNull;
+
 public class NQueens {
     public static void main(String[] args) {
         int n = 5;
@@ -7,7 +9,7 @@ public class NQueens {
         System.out.println(nQueens(board, 0));
     }
 
-    public static int nQueens(boolean[][] board, int row) {
+    public static int nQueens(boolean[] @NotNull [] board, int row) {
         if (row == board.length) {
             System.out.println("Possible solution");
             display(board);
@@ -25,7 +27,7 @@ public class NQueens {
         return count;
     }
 
-    private static boolean isSafe(boolean[][] board, int row, int col) {
+    private static boolean isSafe(boolean[] @NotNull [] board, int row, int col) {
         for (int i = 0; i < row; i++) {
             if (board[i][col]) {
                 return false;
@@ -46,7 +48,7 @@ public class NQueens {
         return true;
     }
 
-    private static void display(boolean[][] board) {
+    private static void display(boolean[] @NotNull [] board) {
         for (boolean[] row : board) {
             for (boolean b : row) {
                 if (b) {

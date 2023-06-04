@@ -30,7 +30,7 @@ public class CountAndSay {
         }
     }
 
-    public String CountAndSay(int n) {
+    public @NotNull String CountAndSay(int n) {
         String s = "1";
         for (int i = 1; i < n; i++) {
             s = count(s);
