@@ -1,9 +1,11 @@
 package Charan.FACE;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.Arrays;
 
 public class LexicographicallyPalindrome {
-    public boolean isLexicographicallyPalindrome(String s) {
+    public boolean isLexicographicallyPalindrome(@NotNull String s) {
         int len = s.length();
         int pos = len / 2;
         if (len % 2 != 0) {

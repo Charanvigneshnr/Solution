@@ -1,7 +1,9 @@
 package Charan.KunalDSA;
 
+import org.jetbrains.annotations.NotNull;
+
 public class RowColMatrix {
-    public int[] searchRow(int[][] matrix, int target) {
+    public int[] searchRow(int[] @NotNull [] matrix, int target) {
         int row = 0;
         int col = matrix[0].length - 1;
         while (row < matrix.length && col >= 0) {

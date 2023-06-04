@@ -27,13 +27,15 @@ Output:
 */
 package Charan.Foobar;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.Arrays;
 import java.util.Comparator;
 
 public class Foobar2a {
-    public static String[] solution(String[] l) {
+    public static String @NotNull [] solution(String @NotNull [] l) {
         Arrays.sort(l, new Comparator<String>() {
-            public int compare(String s1, String s2) {
+            public int compare(@NotNull String s1, @NotNull String s2) {
                 String[] c1 = s1.split("\\.");
                 String[] c2 = s2.split("\\.");
                 int i, x, y;

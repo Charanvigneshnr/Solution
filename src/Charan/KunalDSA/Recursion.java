@@ -1,11 +1,13 @@
 package Charan.KunalDSA;
 
+import org.jetbrains.annotations.NotNull;
+
 public class Recursion {
     public static void main(String[] args) {
         recursion("", "bccadae");
     }
 
-    public static void recursion(String r, String c) {
+    public static void recursion(String r, @NotNull String c) {
         if (c.isEmpty()) {
             System.out.println(r);
             return;

@@ -1,11 +1,13 @@
 package Charan.LeetCode;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class GroupAnagrams {
-    static Boolean checkAnagram(String s, String t) {
+    static @NotNull Boolean checkAnagram(@NotNull String s, @NotNull String t) {
         int len1 = s.length();
         int len2 = t.length();
         char[] arr1 = s.toCharArray();
@@ -19,7 +21,7 @@ public class GroupAnagrams {
         return flag;
     }
 
-    public List<List<String>> groupAnagrams(String[] strs) {
+    public @NotNull List<List<String>> groupAnagrams(String @NotNull [] strs) {
         List<List<String>> outerList = new ArrayList<>();
         List<String> innerList = new ArrayList<>();
         int i;

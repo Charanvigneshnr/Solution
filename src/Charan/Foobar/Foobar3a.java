@@ -24,8 +24,10 @@ Your solution must be under 32000 characters in length including new lines and o
 */
 package Charan.Foobar;
 
+import org.jetbrains.annotations.NotNull;
+
 public class Foobar3a {
-    public static int Foobar3a(int[] l) {
+    public static int Foobar3a(int @NotNull [] l) {
         int count = 0;
         int n = l.length;
         int[] dp = new int[n];

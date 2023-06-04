@@ -1,5 +1,7 @@
 package Charan.FACE;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -14,7 +16,7 @@ public class KruskalsMST {
                         new Edge(2, 3, 4)));
 
         graphEdges.sort(new Comparator<Edge>() {
-            public int compare(Edge o1, Edge o2) {
+            public int compare(@NotNull Edge o1, @NotNull Edge o2) {
                 return o1.weight - o2.weight;
             }
         });
@@ -22,7 +24,7 @@ public class KruskalsMST {
         kruskals(V, graphEdges);
     }
 
-    private static void kruskals(int V, List<Edge> edges) {
+    private static void kruskals(int V, @NotNull List<Edge> edges) {
         int j = 0;
         int noOfEdges = 0;
 
@@ -61,7 +63,7 @@ public class KruskalsMST {
         System.out.println("Total cost of MST: " + minCost);
     }
 
-    private static void union(Subset[] subsets, int x,
+    private static void union(Subset @NotNull [] subsets, int x,
                               int y) {
         int rootX = findRoot(subsets, x);
         int rootY = findRoot(subsets, y);
@@ -77,7 +79,7 @@ public class KruskalsMST {
         }
     }
 
-    private static int findRoot(Subset[] subsets, int i) {
+    private static int findRoot(Subset @NotNull [] subsets, int i) {
         if (subsets[i].parent == i)
             return subsets[i].parent;
 

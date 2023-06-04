@@ -1,8 +1,10 @@
 package Charan.LeetCode;
 
+import org.jetbrains.annotations.Nullable;
+
 class ListNode {
     int val;
-    ListNode next;
+    @Nullable ListNode next;
 
     ListNode() {
     }
@@ -28,7 +30,7 @@ class Solution {
         return reversed;
     }
 
-    public ListNode AddTwoNumbers(ListNode l1, ListNode l2) {
+    public @Nullable ListNode AddTwoNumbers(@Nullable ListNode l1, @Nullable ListNode l2) {
         int n1 = 0;
         int n2 = 0;
         while (l1 != null) {

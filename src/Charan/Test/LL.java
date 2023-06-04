@@ -1,5 +1,7 @@
 package Charan.Test;
 
+import org.jetbrains.annotations.Nullable;
+
 public class LL {
     private Node head;
     private Node tail;
@@ -121,7 +123,7 @@ public class LL {
 
     private class Node {
         private final int data;
-        private Node next;
+        private @Nullable Node next;
 
         public Node(int data) {
             this.data = data;

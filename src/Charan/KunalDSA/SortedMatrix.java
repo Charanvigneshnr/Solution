@@ -1,5 +1,7 @@
 package Charan.KunalDSA;
 
+import org.jetbrains.annotations.NotNull;
+
 public class SortedMatrix {
 
     public int[] bs(int[][] matrix, int row, int cStart, int cEnd, int target) {
@@ -16,7 +18,7 @@ public class SortedMatrix {
         return new int[]{-1, -1};
     }
 
-    public int[] searchMatrix(int[][] matrix, int target) {
+    public int[] searchMatrix(int[] @NotNull [] matrix, int target) {
         int row = matrix.length;
         int col = matrix[0].length;
         if (row == 1) {

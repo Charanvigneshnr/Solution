@@ -1,7 +1,9 @@
 package Charan.LeetCode;
 
+import org.jetbrains.annotations.NotNull;
+
 public class FindPeakElement {
-    public int FindPeakElement(int[] nums) {
+    public int FindPeakElement(int @NotNull [] nums) {
 //        Arrays.sort(nums);
         int max = 0;
         int i;

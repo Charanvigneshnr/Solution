@@ -1,7 +1,9 @@
 package Charan.LeetCode;
 
+import org.jetbrains.annotations.NotNull;
+
 public class MaxSubArray {
-    public int MaxSubArray(int[] nums) {
+    public int MaxSubArray(int @NotNull [] nums) {
         int sum = -999999;
         int max = -999999;
         int i;

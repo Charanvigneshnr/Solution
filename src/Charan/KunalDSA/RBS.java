@@ -1,7 +1,9 @@
 package Charan.KunalDSA;
 
+import org.jetbrains.annotations.NotNull;
+
 public class RBS {
-    public int findPivot(int[] arr) {
+    public int findPivot(int @NotNull [] arr) {
         int start = 0;
         int end = arr.length - 1;
         while (start <= end) {

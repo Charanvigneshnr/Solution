@@ -1,5 +1,7 @@
 package Charan.FACE;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 
 public class JobScheduling {
@@ -30,7 +32,7 @@ public class JobScheduling {
         jobScheduling.printJobScheduling(arr, 3);
     }
 
-    void printJobScheduling(ArrayList<JobScheduling> arr, int t) {
+    void printJobScheduling(@NotNull ArrayList<JobScheduling> arr, int t) {
 
         int n = arr.size();
 

@@ -4,6 +4,8 @@ package Charan.FACE;
 // traversal from a given
 // graph
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.Iterator;
 import java.util.LinkedList;
 
@@ -15,7 +17,7 @@ class DFS {
 
     // Array of lists for
     // Adjacency List Representation
-    private final LinkedList<Integer>[] adj;
+    private final LinkedList<Integer> @NotNull [] adj;
 
     // Constructor
     @SuppressWarnings("unchecked")
@@ -23,7 +25,7 @@ class DFS {
         V = v;
         adj = new LinkedList[v];
         for (int i = 0; i < v; ++i)
-            adj[i] = new LinkedList();
+            adj[i] = new LinkedList<>();
     }
 
     // Driver's Code
@@ -51,7 +53,7 @@ class DFS {
     }
 
     // A function used by DFS
-    void DFSUtil(int v, boolean[] visited) {
+    void DFSUtil(int v, boolean @NotNull [] visited) {
         // Mark the current node as visited and print it
         visited[v] = true;
         System.out.print(v + " ");
@@ -82,4 +84,3 @@ class DFS {
     }
 }
 // This code is contributed by Aakash Hasija
-

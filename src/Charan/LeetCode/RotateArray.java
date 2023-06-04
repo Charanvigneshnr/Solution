@@ -1,7 +1,9 @@
 package Charan.LeetCode;
 
+import org.jetbrains.annotations.NotNull;
+
 public class RotateArray {
-    public void RotateArray(int[] nums, int k) {
+    public void RotateArray(int @NotNull [] nums, int k) {
         int len = nums.length;
         int i, j, l, p = 0;
         if (k > len) {

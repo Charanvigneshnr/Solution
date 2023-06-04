@@ -1,10 +1,12 @@
 package Charan.LeetCode;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.Arrays;
 
 class DSU {
-    private final int[] parent;
-    private final int[] rank;
+    private final int @NotNull [] parent;
+    private final int @NotNull [] rank;
 
     public DSU(int n) {
 
@@ -40,7 +42,7 @@ class DSU {
 }
 
 class DistanceLimitedPathsExist {
-    public boolean[] DistanceLimitedPathsExist(int n, int[][] edgeList, int[][]
+    public boolean[] DistanceLimitedPathsExist(int n, int[] @NotNull [] edgeList, int[] @NotNull []
             queries) {
         DSU dsu = new DSU(n);
         for (int i = 0; i < queries.length; i++) {

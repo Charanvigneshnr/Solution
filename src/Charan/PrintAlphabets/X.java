@@ -1,7 +1,9 @@
 package Charan.PrintAlphabets;
 
+import org.jetbrains.annotations.NotNull;
+
 public class X {
-    static void LetterX(String s, int len) {
+    static void LetterX(@NotNull String s, int len) {
         System.out.println("\nPrinting " + s + " in the pattern X\n");
         for (int i = 0; i < len; i++) {
             for (int j = 0; j < len; j++) {

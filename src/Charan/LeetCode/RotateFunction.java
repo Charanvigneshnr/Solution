@@ -1,7 +1,9 @@
 package Charan.LeetCode;
 
+import org.jetbrains.annotations.NotNull;
+
 public class RotateFunction {
-    public int RotateFunction(int[] nums) {
+    public int RotateFunction(int @NotNull [] nums) {
         int len = nums.length;
         int sum = 0, sum1 = 0, ans = 0;
         for (int i = 0; i < len; i++) {

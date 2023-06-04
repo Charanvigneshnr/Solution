@@ -1,7 +1,9 @@
 package Charan.LeetCode;
 
+import org.jetbrains.annotations.NotNull;
+
 public class CountAndSay {
-    public String count(String n) {
+    public @NotNull String count(String n) {
         if (n == "1") {
             return "1";
         }

@@ -1,5 +1,7 @@
 package Charan.KunalDSA;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,7 +14,7 @@ public class Subsequence {
         }
     }
 
-    public static List<List<Integer>> subset(int[] arr) {
+    public static @NotNull List<List<Integer>> subset(int @NotNull [] arr) {
         List<List<Integer>> outer = new ArrayList<>();
         outer.add(new ArrayList<>());
         for (int i : arr) {

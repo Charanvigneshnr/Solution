@@ -1,9 +1,11 @@
 package Charan.LeetCode;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.Arrays;
 
 public class SuccessfulPairs {
-    public int[] SuccessfulPairs(int[] spells, int[] potions, long success) {
+    public int[] SuccessfulPairs(int @NotNull [] spells, int @NotNull [] potions, long success) {
         int len1 = spells.length;
         int len2 = potions.length;
         int[] result = new int[len1];

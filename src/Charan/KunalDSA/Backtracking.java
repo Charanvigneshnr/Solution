@@ -1,12 +1,14 @@
 package Charan.KunalDSA;
 
+import org.jetbrains.annotations.NotNull;
+
 public class Backtracking {
     public static void main(String[] args) {
         boolean[][] matrix = {{true, true, true}, {true, true, true}, {true, true, true}};
         totalPath("", matrix, 0, 0);
     }
 
-    public static void totalPath(String p, boolean[][] arr, int r, int c) {
+    public static void totalPath(String p, boolean[] @NotNull [] arr, int r, int c) {
         if (r == arr.length - 1 && c == arr[0].length - 1) {
             System.out.println(p);
             return;

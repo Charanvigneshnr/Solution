@@ -1,5 +1,7 @@
 package Charan.FACE;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -13,7 +15,7 @@ public class ClimbingLeaders {
         }
     }
 
-    public int[] ClimbingLeaders(int[] arr) {
+    public int[] ClimbingLeaders(int @NotNull [] arr) {
         ArrayList<Integer> list = new ArrayList<>();
         int len = arr.length;
         list.add(arr[len - 1]);

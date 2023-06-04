@@ -6,10 +6,12 @@ Input:Solution.solution('2', '1')Output:    1
 */
 package Charan.Foobar;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.math.BigInteger;
 
 public class Foobar3b {
-    public static String solution(String M, String F) {
+    public static String solution(@NotNull String M, @NotNull String F) {
         BigInteger m = new BigInteger(M);
         BigInteger f = new BigInteger(F);
         BigInteger c = BigInteger.ZERO;

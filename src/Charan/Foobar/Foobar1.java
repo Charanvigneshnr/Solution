@@ -30,11 +30,13 @@ Output:
 
 package Charan.Foobar;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Foobar1 {
-    public static int solution(String x) {
+    public static int solution(@NotNull String x) {
         int len = x.length();
         int cut, j;
         for (cut = 1; cut < len; cut++) {

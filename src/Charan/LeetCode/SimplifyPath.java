@@ -1,9 +1,11 @@
 package Charan.LeetCode;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.Stack;
 
 public class SimplifyPath {
-    public String SimplifyPath(String path) {
+    public @NotNull String SimplifyPath(@NotNull String path) {
         Stack<String> myStack = new Stack<>();
         String[] folders = path.split("/");
         for (String s : folders) {

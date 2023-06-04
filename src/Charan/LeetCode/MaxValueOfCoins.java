@@ -1,9 +1,11 @@
 package Charan.LeetCode;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.List;
 
 public class MaxValueOfCoins {
-    public static int MaxValueOfCoins(List<List<Integer>> piles, int k) {
+    public static int MaxValueOfCoins(@NotNull List<List<Integer>> piles, int k) {
         int[] mv = new int[k + 1];
         int[] pileSum = new int[k + 1];
         for (List<Integer> pile : piles) {

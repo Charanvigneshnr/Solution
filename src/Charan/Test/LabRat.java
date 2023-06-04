@@ -1,8 +1,10 @@
 package Charan.Test;
 
+import org.jetbrains.annotations.NotNull;
+
 public class LabRat {
 
-    public String findStringVowelFirstAndLast(int input1, String[] input2) {
+    public @NotNull String findStringVowelFirstAndLast(int input1, String[] input2) {
         String result = "";
         int count = 0;
 

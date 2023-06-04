@@ -1,5 +1,7 @@
 package Charan.LeetCode;
 
+import org.jetbrains.annotations.NotNull;
+
 interface MountainArray {
     int get(int index);
 
@@ -7,7 +9,7 @@ interface MountainArray {
 }
 
 public class FindInMountainArray {
-    public int FindInMountainArray(MountainArray mountainArr, int target) {
+    public int FindInMountainArray(@NotNull MountainArray mountainArr, int target) {
         int peak = peakElement(mountainArr);
         int firstTry = orderAgnosticBS(mountainArr, target, 0, peak);
         if (firstTry != -1) {
@@ -17,7 +19,7 @@ public class FindInMountainArray {
         }
     }
 
-    public int peakElement(MountainArray mountainArr) {
+    public int peakElement(@NotNull MountainArray mountainArr) {
         int low = 0;
         int high = mountainArr.length() - 1;
         int mid = 0;
@@ -32,7 +34,7 @@ public class FindInMountainArray {
         return low;
     }
 
-    public int orderAgnosticBS(MountainArray mountainArr, int target, int start, int end) {
+    public int orderAgnosticBS(@NotNull MountainArray mountainArr, int target, int start, int end) {
         boolean ascending = mountainArr.get(start) < mountainArr.get(end);
         while (start <= end) {
             int mid = start + (end - start) / 2;
@@ -57,4 +59,3 @@ public class FindInMountainArray {
         return -1;
     }
 }
-

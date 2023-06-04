@@ -1,11 +1,13 @@
 package Charan.LeetCode;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class Compress {
-    public int Compress(char[] s) {
+    public int Compress(char @NotNull [] s) {
         Arrays.sort(s);
         List<String> list = new ArrayList<String>();
         int len = s.length;

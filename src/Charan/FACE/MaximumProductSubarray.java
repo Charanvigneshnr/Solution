@@ -1,10 +1,12 @@
 package Charan.FACE;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.Scanner;
 
 //Maximum Product Subarray
 public class MaximumProductSubarray {
-    public static int MaximumProductSubarray(int[] arr) {
+    public static int MaximumProductSubarray(int @NotNull [] arr) {
         int n = arr.length;
         int ans = Integer.MIN_VALUE;
         int product = 1;

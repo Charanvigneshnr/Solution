@@ -1,11 +1,13 @@
 package Charan.LeetCode;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class KidsWithCandies {
-    public List<Boolean> KidsWithCandies(int[] candies, int extraCandies) {
+    public @NotNull List<Boolean> KidsWithCandies(int @NotNull [] candies, int extraCandies) {
         int len = candies.length;
         ArrayList<Boolean> list = new ArrayList<>();
         int i;

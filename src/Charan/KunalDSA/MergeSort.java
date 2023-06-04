@@ -1,5 +1,7 @@
 package Charan.KunalDSA;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.Arrays;
 
 public class MergeSort {
@@ -8,7 +10,7 @@ public class MergeSort {
         System.out.println(Arrays.toString(mergeSort(arr)));
     }
 
-    public static int[] mergeSort(int[] arr) {
+    public static int[] mergeSort(int @NotNull [] arr) {
         int len = arr.length;
         if (len == 1) {
             return arr;
@@ -19,7 +21,7 @@ public class MergeSort {
         return merge(left, right);
     }
 
-    private static int[] merge(int[] first, int[] second) {
+    private static int[] merge(int @NotNull [] first, int @NotNull [] second) {
         int len = first.length + second.length;
         int firstLen = first.length;
         int secondLen = second.length;

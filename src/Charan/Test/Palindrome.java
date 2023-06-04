@@ -1,7 +1,9 @@
 package Charan.Test;
 
+import org.jetbrains.annotations.Nullable;
+
 public class Palindrome {
-    public boolean isPalindrome(String str) {
+    public boolean isPalindrome(@Nullable String str) {
         boolean result = false;
         if (str == null || str.length() == 0) {
             result = false;

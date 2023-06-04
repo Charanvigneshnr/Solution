@@ -1,7 +1,9 @@
 package Charan.LeetCode;
 
+import org.jetbrains.annotations.NotNull;
+
 public class LongestCommonSubsequence {
-    public int LongestCommonSubsequence(String text1, String text2) {
+    public int LongestCommonSubsequence(@NotNull String text1, @NotNull String text2) {
         int len1 = text1.length();
         int len2 = text2.length();
         int[][] dp = new int[len1 + 1][len2 + 1];

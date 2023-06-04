@@ -1,5 +1,7 @@
 package Charan.KunalDSA;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.Arrays;
 
 public class CyclicSort {
@@ -9,7 +11,7 @@ public class CyclicSort {
         System.out.println(Arrays.toString(arr));
     }
 
-    public static int CyclicSort(int[] arr) {
+    public static int CyclicSort(int @NotNull [] arr) {
         int len = arr.length;
         int i = 0;
         int correct, temp;

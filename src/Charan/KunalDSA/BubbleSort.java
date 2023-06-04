@@ -1,7 +1,9 @@
 package Charan.KunalDSA;
 
+import org.jetbrains.annotations.NotNull;
+
 public class BubbleSort {
-    public void BubbleSort(int[] arr) {
+    public void BubbleSort(int @NotNull [] arr) {
         int len = arr.length;
         int i, j, temp;
         boolean flag = false;

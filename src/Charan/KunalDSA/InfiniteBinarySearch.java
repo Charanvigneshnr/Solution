@@ -1,7 +1,9 @@
 package Charan.KunalDSA;
 
+import org.jetbrains.annotations.NotNull;
+
 public class InfiniteBinarySearch {
-    public static int result(int[] arr, int target) {
+    public static int result(int @NotNull [] arr, int target) {
         int start = 0;
         int end = 1;
         int result = 0;

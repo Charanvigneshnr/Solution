@@ -1,7 +1,9 @@
 package Charan.LeetCode;
 
+import org.jetbrains.annotations.NotNull;
+
 public class ProfitableSchemes {
-    public int ProfitableSchemes(int n, int minProfit, int[] group, int[] profit) {
+    public int ProfitableSchemes(int n, int minProfit, int @NotNull [] group, int[] profit) {
         // Define the method signature and input parameters
 
         int mod = (int) 1e9 + 7;

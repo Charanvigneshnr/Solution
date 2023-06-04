@@ -1,7 +1,9 @@
 package Charan.KunalDSA;
 
+import org.jetbrains.annotations.NotNull;
+
 public class SelectionSort {
-    public void SelectionSort(int[] arr) {
+    public void SelectionSort(int @NotNull [] arr) {
         int len = arr.length;
         int i, maxIndex, last = len - 1;
         for (i = 0; i < len; i++) {
@@ -11,7 +13,7 @@ public class SelectionSort {
         }
     }
 
-    public void swap(int[] arr, int i, int j) {
+    public void swap(int @NotNull [] arr, int i, int j) {
         int temp = arr[i];
         arr[i] = arr[j];
         arr[j] = temp;
