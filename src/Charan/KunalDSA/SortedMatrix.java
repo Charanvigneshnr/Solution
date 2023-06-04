@@ -18,7 +18,7 @@ public class SortedMatrix {
         return new int[]{-1, -1};
     }
 
-    public int[] searchMatrix(int[] @NotNull @NotNull [] matrix, int target) {
+    public int[] searchMatrix(int[] @NotNull [] matrix, int target) {
         int row = matrix.length;
         int col = matrix[0].length;
         if (row == 1) {
