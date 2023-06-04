@@ -17,7 +17,7 @@ public class Backtracking {
             for (int[] mat : path) {
                 System.out.println(Arrays.toString(mat));
             }
-            System.out.println(p.substring(0, p.length() - 2));
+            System.out.println("Path: " + p.substring(0, p.length() - 2));
             System.out.println();
             return;
         }
