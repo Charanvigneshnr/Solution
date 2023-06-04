@@ -7,4 +7,4 @@ This repository is regularly maintained by me as I maintain
 my consistency in solving problems with the drive from Leetcode
 Daily Coding Problems
 
-Leetcode Profile: https://leetcode.com/charanvignesh10/
+Leetcode Profile: https://leetcode.com/Charan_Vignesh_N_R/
