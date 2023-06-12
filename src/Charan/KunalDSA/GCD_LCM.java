@@ -2,7 +2,8 @@ package Charan.KunalDSA;
 
 public class GCD_LCM {
     public static void main(String[] args) {
-        System.out.println(LCM(4, 8));
+        System.out.println(LCM(7, 12));
+        System.out.println(GCD(8, 12));
     }
 
     static int GCD(int a, int b) {
