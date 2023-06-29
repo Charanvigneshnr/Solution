@@ -38,6 +38,5 @@ public class OOPS_1 {
 
     public void display() {
         System.out.format("Name: %s\nRoll Number: %d\nMarks: %d\n\n", name, rn, marks);
-        return;
     }
 }
