@@ -1,31 +1,22 @@
 package Charan.Test;
 
-import org.jetbrains.annotations.NotNull;
+import java.util.HashMap;
 
 public class LabRat {
-
-    public @NotNull String findStringVowelFirstAndLast(int input1, String[] input2) {
-        String result = "";
-        int count = 0;
-
-        for (int i = 0; i < input1; i++) {
-            String s = input2[i].toLowerCase();
-            int len = s.length();
-
-            char firstChar = s.charAt(0);
-            char lastChar = s.charAt(len - 1);
-
-            if ((firstChar == 'a' || firstChar == 'e' || firstChar == 'i' || firstChar == 'o' || firstChar == 'u') &&
-                    (lastChar == 'a' || lastChar == 'e' || lastChar == 'i' || lastChar == 'o' || lastChar == 'u')) {
-                result += s;
-                count++;
-            }
+    public static void main(String[] args) {
+        HashMap<Integer, String> map = new HashMap<>();
+        map.put(1, "A");
+        map.put(2, "B");
+        map.put(3, "C");
+        map.put(4, "D");
+        map.put(5, "E");
+        map.put(6, "F");
+        int len = map.size();
+        int i;
+        for (i = 1; i <= len; i++) {
+            System.out.println(map.get(i));
+            System.out.println(map.containsValue((char) ('A' + (i - 1))));
         }
-
-        if (count > 1) {
-            return result;
-        } else {
-            return "no matches found";
-        }
+        System.out.println((char) ('A' + 1));
     }
 }
