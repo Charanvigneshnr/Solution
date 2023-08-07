@@ -35,4 +35,5 @@ public class MaximumProductSubarray {
 Idea:
 1. Traverse the array left to right once and get the max product
 2. Traverse the array right to left once and get the max product
+3. If arr[i] == 0 then product = 1
 */
