@@ -27,7 +27,7 @@ public class Test {
         SecretKey secretKey = keyGenerator.generateKey();
 
         // Example plaintext
-        String plaintext = "Hello, DES encryption!";
+        String plaintext = "Hello World!";
         System.out.println(secretKey);
         // Encryption
         String encryptedText = encrypt(plaintext, secretKey);
