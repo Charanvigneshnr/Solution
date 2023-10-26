@@ -11,7 +11,7 @@ public class BookTicket {
         int numberOfFlights = sc.nextInt();
         ArrayList<Flight> flights = new ArrayList<>();
         for (int i = 0; i < numberOfFlights; i++)
-            flights.add(new Flight());
+            flights.add(new Flight(i + 1));
         int passengerID = 1;
         while (true) {
             System.out.println("1. Book 2. Cancel 3. Print");

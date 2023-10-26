@@ -12,7 +12,7 @@ public class Flight {
     ArrayList<Integer> bookedTicketsPerPassenger;
     ArrayList<Integer> passengerCost;
 
-    public Flight() {
+    public Flight(int i) {
         tickets = 50;
         price = 5000;
         id = id + 1;

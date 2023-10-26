@@ -5,11 +5,11 @@ import java.util.*;
 public class TicketBooker {
     //63 berths(upper ,lower , middle)  + ( 18 RAC passengers) 
     //10 waiting list tickets ->21 L, 21 M, 21U , 18RAC, 10WL
-    static int availableLowerBerths = 1;//normally 21
-    static int availableMiddleBerths = 1;//normally 21
-    static int availableUpperBerths = 1;//normally 21
-    static int availableRacTickets = 1;//normally 18
-    static int availableWaitingList = 1;//normally 10
+    static int availableLowerBerths = 21;//normally 21
+    static int availableMiddleBerths = 21;//normally 21
+    static int availableUpperBerths = 21;//normally 21
+    static int availableRacTickets = 18;//normally 18
+    static int availableWaitingList = 10;//normally 10
 
     static Queue<Integer> waitingList = new LinkedList<>();//queue of WL passengers
     static Queue<Integer> racList = new LinkedList<>();//queu of RAC passengers
