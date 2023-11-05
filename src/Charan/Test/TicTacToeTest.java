@@ -27,10 +27,9 @@ public class TicTacToeTest {
 class TicTacToe {
     public static final int X = 1, O = -1;
     public static final int EMPTY = 0;
-
+    private final int[][] board = new int[3][3];
     public int player = X;
     public boolean isEmpty = false;
-    private final int[][] board = new int[3][3];
 
     public void putSign(int x, int y) {
         if (x < 0 || x > 2 || y < 0 || y > 2) {

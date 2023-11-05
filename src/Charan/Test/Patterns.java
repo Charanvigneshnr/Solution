@@ -9,7 +9,7 @@ public class Patterns {
         int i, j;
         for (i = 1; i < 2 * n; i++) {
             for (j = 1; j < 2 * n; j++) {
-                System.out.print(getVal(n, i, j) + " ");
+                System.out.format("%02d ", getVal(n, i, j));
             }
             System.out.println();
         }

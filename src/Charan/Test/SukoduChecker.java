@@ -6,13 +6,15 @@ import java.util.HashSet;
 class Sudoku {
     private static final int UNASSIGNED = 0;
     private final int[][] sudoku;
+    private final ArrayList<HashSet<Integer>> arrList = new ArrayList<HashSet<Integer>>();
     private HashSet<Integer> rowSet = null;
     private HashSet<Integer> colSet = null;
     private HashSet<Integer> boxSet = null;
-    private final ArrayList<HashSet<Integer>> arrList = new ArrayList<HashSet<Integer>>();
+
     public Sudoku() {
         sudoku = new int[9][9];
     }
+
     Sudoku(int[][] sudoku) {
         this.sudoku = sudoku;
     }
